@@ -19,7 +19,7 @@ build-section = ([name, config])->
     #{config.params |> map build-param |> join "\n"}
     }
     
-    kauriSDK.#{name}(params, function(err, data) {
+    api.#{name}(params, function(err, data) {
         
         if (err) {
             console.log(err);
@@ -49,6 +49,13 @@ build-section = ([name, config])->
     ------
     
     """
+    
+method-list =
+    config
+        |> obj-to-pairs 
+        |> map -> " * #{it.0}"
+        |> join "\n"
+
 available-methods =
     config 
         |> obj-to-pairs
@@ -72,9 +79,17 @@ content =
  ```Javascript 
  const kauriSDK = require('kauri-sdk');
  
+ const token = '....'; // get token from api.obtainToken
+ 
+ const api = kauriSDK(token);
+ 
  ```
  
  ## Available Methods
+ 
+ #{method-list}
+ 
+ ## Method Descriptions
  
  #{available-methods}
  

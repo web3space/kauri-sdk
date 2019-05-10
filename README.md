@@ -8,18 +8,34 @@ The NodeJS module for Kauri/Coinpay API
 npm i kauri-sdk
 ```
 
-### Documentation
-
-[Is here](https://docs.google.com/document/d/1v6ROBYBfAlKukoa2qzpREmD0IJgL4ZABxIHbMe7dBAM/edit?usp=sharing)
-
 ## Import 
 
 ```Javascript 
 const kauriSDK = require('kauri-sdk');
 
+const token = '....'; // get token from api.obtainToken
+
+const api = kauriSDK(token);
+
 ```
 
 ## Available Methods
+
+ * exchangeRate
+ * createUser
+ * obtainToken
+ * refreshToken
+ * getBalance
+ * accountInfo
+ * withdrawal
+ * cancelWithdrawal
+ * repeatWithdrawal
+ * exchange
+ * exchangeCalculate
+ * orderHistory
+ * orderDetails
+
+## Method Descriptions
 
 ### Получение текущих цен
 
@@ -31,7 +47,7 @@ const params = {
 
 }
 
-kauriSDK.exchangeRate(params, function(err, data) {
+api.exchangeRate(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -84,7 +100,7 @@ const params = {
     username: '',
 }
 
-kauriSDK.createUser(params, function(err, data) {
+api.createUser(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -125,10 +141,9 @@ HTTP Status: 200
 const params = {
     password: '',
     email: '',
-    username: '',
 }
 
-kauriSDK.obtainToken(params, function(err, data) {
+api.obtainToken(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -167,12 +182,10 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+    token: '',
 }
 
-kauriSDK.refreshToken(params, function(err, data) {
+api.refreshToken(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -213,7 +226,7 @@ const params = {
 
 }
 
-kauriSDK.getBalance(params, function(err, data) {
+api.getBalance(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -296,12 +309,10 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+
 }
 
-kauriSDK.accountInfo(params, function(err, data) {
+api.accountInfo(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -555,12 +566,14 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+    withdrawal_type: '',
+    wallet_to: '',
+    comment: '',
+    amount: '',
+    currency: '',
 }
 
-kauriSDK.withdrawal(params, function(err, data) {
+api.withdrawal(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -599,12 +612,10 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+    order_id: '',
 }
 
-kauriSDK.cancelWithdrawal(params, function(err, data) {
+api.cancelWithdrawal(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -640,12 +651,10 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+    order_id: '',
 }
 
-kauriSDK.repeatWithdrawal(params, function(err, data) {
+api.repeatWithdrawal(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -681,12 +690,12 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+    currency_to_get_amount: '',
+    currency_to_spend: '',
+    currency_to_get: '',
 }
 
-kauriSDK.exchange(params, function(err, data) {
+api.exchange(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -725,12 +734,12 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+    currency_to_get_amount: '',
+    currency_to_spend: '',
+    currency_to_get: '',
 }
 
-kauriSDK.exchangeCalculate(params, function(err, data) {
+api.exchangeCalculate(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -766,12 +775,10 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+
 }
 
-kauriSDK.orderHistory(params, function(err, data) {
+api.orderHistory(params, function(err, data) {
     
     if (err) {
         console.log(err);
@@ -829,7 +836,7 @@ const params = {
     order_id: '',
 }
 
-kauriSDK.orderDetails(params, function(err, data) {
+api.orderDetails(params, function(err, data) {
     
     if (err) {
         console.log(err);
