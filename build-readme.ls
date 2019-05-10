@@ -47,6 +47,8 @@ build-section = ([name, config])->
     #{if config.example? then JSON.stringify(config.example, null, 4) else ''}
     ```
     ------
+    ------
+    ------
     
     
     
