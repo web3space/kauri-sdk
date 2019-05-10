@@ -69,7 +69,7 @@ curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -125,7 +125,7 @@ curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -171,7 +171,7 @@ curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -216,7 +216,7 @@ curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -260,7 +260,7 @@ curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer 
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -349,7 +349,7 @@ curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer 
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -613,7 +613,7 @@ curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -658,7 +658,7 @@ curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -700,7 +700,7 @@ curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -744,7 +744,7 @@ curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -791,7 +791,7 @@ curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer 
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -833,7 +833,7 @@ curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer 
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 
@@ -894,7 +894,7 @@ curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer 
 
 ```
 
-### Return Example
+#### Return Example
 
 HTTP Status: 200
 

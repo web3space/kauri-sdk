@@ -39,7 +39,7 @@ build-section = ([name, config])->
     
     ```
     
-    ### Return Example
+    #### Return Example
     
     HTTP Status: 200
     
