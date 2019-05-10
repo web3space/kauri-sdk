@@ -66,6 +66,8 @@ content =
  """
  # KAURI SDK
  
+ ![Kauri Finance](https://res.cloudinary.com/nixar-work/image/upload/v1557528990/Screen_Shot_2019-05-11_at_01.56.00.png)
+ 
  The NodeJS module for Kauri/Coinpay API
  
  ## Install
