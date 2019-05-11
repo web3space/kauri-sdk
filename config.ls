@@ -22,6 +22,10 @@ module.exports =
         method: \post
         need-key: no
         params: <[ password email username ]>
+        param-exmaples:
+          email: "a****@gmail.com"
+          password: "theStrongPassW00rd"
+          username: "exadmin"
         query: \user/create
         example:
           "username": "1@gmail.com"
@@ -32,6 +36,9 @@ module.exports =
         method: \post
         need-key: no
         params: <[ password email ]>
+        param-exmaples:
+          email: "a****@gmail.com"
+          password: "theStrongPassW00rd"
         query: \user/obtain_token
         example:
             "username": "Свят",
@@ -42,6 +49,8 @@ module.exports =
         method: \post
         need-key: no
         params: <[ token ]>
+        param-exmaples:
+          token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzg5NDIsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzgzNDIsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.cEqgi0bchlbKkObZtkFryPdmcmzWoTZ_CQlXA6k3gSM"
         query: \user/refresh_token
         example:
             "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkxMjEsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzgzNDIsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.AkqWizMnApa9MNfs1qdmsJuDJrUiu2B7c2-gQ0Q0a5M"
@@ -318,6 +327,12 @@ module.exports =
         method: \post
         need-key: yes
         params: <[ withdrawal_type wallet_to comment amount currency ]>
+        param-exmaples:
+          withdrawal_type: "GATEWAY"
+          wallet_to: "<destination_wallet>"
+          comment: "Withdraw Funds"
+          amount: "1"
+          currency: "UAH"
         query: \withdrawal
         example: 
             {
@@ -331,6 +346,8 @@ module.exports =
         method: \post
         need-key: yes
         params: <[ order_id ]>
+        param-exmaples:
+          order_id: "840e166e-86ad-47cf-8cbc-7c1840b2010"
         query: \withdrawal/cancel
     repeat-withdrawal: 
         title: "Повторение заявки на вывод"
@@ -338,12 +355,18 @@ module.exports =
         method: \post
         need-key: yes
         params: <[ order_id ]>
+        param-exmaples:
+          order_id: "840e166e-86ad-47cf-8cbc-7c1840b2010"
         query: \withdrawal/repeat
     exchange: 
         title: "Создание заявки на обмен по рынку"
         method: \post
         need-key: yes
         params: <[ currency_to_get_amount currency_to_spend currency_to_get ]>
+        param-examples:
+          currency_to_get_amount : "100"
+          currency_to_spend : "BTC"
+          currency_to_get : "UAH"
         query: \exchange
         example:
           "order_id": "840e166e-86ad-47cf-8cbc-7c1840b20103",
@@ -353,6 +376,10 @@ module.exports =
         method: \get
         need-key: yes
         params: <[ currency_to_get_amount currency_to_spend currency_to_get ]>
+        param-examples:
+          currency_to_get_amount : "100"
+          currency_to_spend : "BTC"
+          currency_to_get : "UAH"
         query: \exchange/calculate
     order-history: 
         title: "Получении истории по заявкам"
@@ -387,6 +414,8 @@ module.exports =
         method: \get
         need-key: yes
         params: <[ order_id ]>
+        param-exmaples:
+          order_id: "840e166e-86ad-47cf-8cbc-7c1840b2010"
         query: \orders/details
         example:
             {

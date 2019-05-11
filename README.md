@@ -23,22 +23,23 @@ const api = kauriSDK(token);
 
 ## Available Methods
 
- * exchangeRate
- * createUser
- * obtainToken
- * refreshToken
- * getBalance
- * accountInfo
- * withdrawal
- * cancelWithdrawal
- * repeatWithdrawal
- * exchange
- * exchangeCalculate
- * orderHistory
- * orderDetails
+ * [api.exchangeRate(params, cb)](#exchangeRate)
+ * [api.createUser(params, cb)](#createUser)
+ * [api.obtainToken(params, cb)](#obtainToken)
+ * [api.refreshToken(params, cb)](#refreshToken)
+ * [api.getBalance(params, cb)](#getBalance)
+ * [api.accountInfo(params, cb)](#accountInfo)
+ * [api.withdrawal(params, cb)](#withdrawal)
+ * [api.cancelWithdrawal(params, cb)](#cancelWithdrawal)
+ * [api.repeatWithdrawal(params, cb)](#repeatWithdrawal)
+ * [api.exchange(params, cb)](#exchange)
+ * [api.exchangeCalculate(params, cb)](#exchangeCalculate)
+ * [api.orderHistory(params, cb)](#orderHistory)
+ * [api.orderDetails(params, cb)](#orderDetails)
 
 ## Method Descriptions
 
+(#exchangeRate)
 ### Получение текущих цен
 
 
@@ -60,6 +61,7 @@ api.exchangeRate(params, function(err, data) {
 
 ```
 
+Need Token: no
 
 #### Try it manually
 
@@ -88,6 +90,7 @@ HTTP Status: 200
     "status": "success"
 }
 ```
+
 ------
 ------
 ------
@@ -95,6 +98,7 @@ HTTP Status: 200
 
 
 
+(#createUser)
 ### Создание аккаунта
 
 
@@ -118,6 +122,7 @@ api.createUser(params, function(err, data) {
 
 ```
 
+Need Token: no
 
 #### Try it manually
 
@@ -137,6 +142,7 @@ HTTP Status: 200
     "email": "1@gmail.com"
 }
 ```
+
 ------
 ------
 ------
@@ -144,6 +150,7 @@ HTTP Status: 200
 
 
 
+(#obtainToken)
 ### Авторизация через АПИ
 
 Используйте для создания API `const api = KauriSDK(token)`
@@ -166,6 +173,7 @@ api.obtainToken(params, function(err, data) {
 
 ```
 
+Need Token: no
 
 #### Try it manually
 
@@ -185,6 +193,7 @@ HTTP Status: 200
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzg5NDIsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzgzNDIsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.cEqgi0bchlbKkObZtkFryPdmcmzWoTZ_CQlXA6k3gSM"
 }
 ```
+
 ------
 ------
 ------
@@ -192,6 +201,7 @@ HTTP Status: 200
 
 
 
+(#refreshToken)
 ### Обновление токена
 
 Используйте для создания API `const api = KauriSDK(token)`
@@ -213,6 +223,7 @@ api.refreshToken(params, function(err, data) {
 
 ```
 
+Need Token: no
 
 #### Try it manually
 
@@ -231,6 +242,7 @@ HTTP Status: 200
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkxMjEsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzgzNDIsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.AkqWizMnApa9MNfs1qdmsJuDJrUiu2B7c2-gQ0Q0a5M"
 }
 ```
+
 ------
 ------
 ------
@@ -238,6 +250,7 @@ HTTP Status: 200
 
 
 
+(#getBalance)
 ### Получение баланса и адресов для пополнения
 
 
@@ -259,6 +272,7 @@ api.getBalance(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -322,6 +336,7 @@ HTTP Status: 200
     }
 }
 ```
+
 ------
 ------
 ------
@@ -329,6 +344,7 @@ HTTP Status: 200
 
 
 
+(#accountInfo)
 ### Получение лимитов, фии и и.т.д. По операциям
 
 Этот АПИ колл возвращает информацию по лимитам на обмен для каждой пары, возвращает лимиты на ввод, вывод, какие фии будут применены для ввода или вывода. У каждой операции ввода, вывода есть подтип операции, который может быть доступен человеку или нет.
@@ -350,6 +366,7 @@ api.accountInfo(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -584,6 +601,7 @@ HTTP Status: 200
     }
 }
 ```
+
 ------
 ------
 ------
@@ -591,6 +609,7 @@ HTTP Status: 200
 
 
 
+(#withdrawal)
 ### Создание заявки на вывод через шлюз(блокчейн или на счёт/карту)
 
 
@@ -616,6 +635,7 @@ api.withdrawal(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -635,6 +655,7 @@ HTTP Status: 200
     "status": "success"
 }
 ```
+
 ------
 ------
 ------
@@ -642,6 +663,7 @@ HTTP Status: 200
 
 
 
+(#cancelWithdrawal)
 ### Отмена заявки на вывод
 
 Есть возможность отмены заявки на вывод если она активна, и если в данный момент не обрабатывается.
@@ -663,6 +685,7 @@ api.cancelWithdrawal(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -679,6 +702,7 @@ HTTP Status: 200
 ```JSON
 
 ```
+
 ------
 ------
 ------
@@ -686,6 +710,7 @@ HTTP Status: 200
 
 
 
+(#repeatWithdrawal)
 ### Повторение заявки на вывод
 
 Есть возможность повтора заявки на вывод если она завершена
@@ -707,6 +732,7 @@ api.repeatWithdrawal(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -723,6 +749,7 @@ HTTP Status: 200
 ```JSON
 
 ```
+
 ------
 ------
 ------
@@ -730,6 +757,7 @@ HTTP Status: 200
 
 
 
+(#exchange)
 ### Создание заявки на обмен по рынку
 
 
@@ -737,9 +765,9 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    currency_to_get_amount: '',
-    currency_to_spend: '',
-    currency_to_get: '',
+    currency_to_get_amount: '100',
+    currency_to_spend: 'BTC',
+    currency_to_get: 'UAH',
 }
 
 api.exchange(params, function(err, data) {
@@ -753,6 +781,7 @@ api.exchange(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -772,6 +801,7 @@ HTTP Status: 200
     "status": "success"
 }
 ```
+
 ------
 ------
 ------
@@ -779,6 +809,7 @@ HTTP Status: 200
 
 
 
+(#exchangeCalculate)
 ### Рассчитать коммиссию перед обменом
 
 
@@ -786,9 +817,9 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    currency_to_get_amount: '',
-    currency_to_spend: '',
-    currency_to_get: '',
+    currency_to_get_amount: '100',
+    currency_to_spend: 'BTC',
+    currency_to_get: 'UAH',
 }
 
 api.exchangeCalculate(params, function(err, data) {
@@ -802,6 +833,7 @@ api.exchangeCalculate(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -818,6 +850,7 @@ HTTP Status: 200
 ```JSON
 
 ```
+
 ------
 ------
 ------
@@ -825,6 +858,7 @@ HTTP Status: 200
 
 
 
+(#orderHistory)
 ### Получении истории по заявкам
 
 У этого функционала есть пагинация, фильтр по типу заявок, и подтипу. Пример ответа по истории, где есть одна заявка на вывод гривны.На каждой странице выводиться по 10 заявок
@@ -846,6 +880,7 @@ api.orderHistory(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -881,6 +916,7 @@ HTTP Status: 200
     ]
 }
 ```
+
 ------
 ------
 ------
@@ -888,6 +924,7 @@ HTTP Status: 200
 
 
 
+(#orderDetails)
 ### Получение деталей по заявкам
 
 
@@ -909,6 +946,7 @@ api.orderDetails(params, function(err, data) {
 
 ```
 
+Need Token: yes
 
 #### Try it manually
 
@@ -929,6 +967,7 @@ HTTP Status: 200
     "order_id": "order_external_id"
 }
 ```
+
 ------
 ------
 ------

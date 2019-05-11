@@ -4,11 +4,12 @@ require! {
     \fs : { write-file-sync }
 }
 
-build-param = (name)->
-    "    #{name}: '',"
+build-param = (config, name)-->
+    "    #{name}: '#{config.param-examples?[name] ? ''}',"
 
 build-section = ([name, config])->
     """
+    (##{name})
     ### #{config.title}
     
     #{config.desc ? ""}
@@ -16,7 +17,7 @@ build-section = ([name, config])->
     ```Javascript
     
     const params = {
-    #{config.params |> map build-param |> join "\n"}
+    #{config.params |> map build-param config |> join "\n"}
     }
     
     api.#{name}(params, function(err, data) {
@@ -30,6 +31,7 @@ build-section = ([name, config])->
     
     ```
     
+    Need Token: #{if config.need-key then 'yes' else 'no' }
     
     #### Try it manually
     
@@ -46,6 +48,7 @@ build-section = ([name, config])->
     ```JSON
     #{if config.example? then JSON.stringify(config.example, null, 4) else ''}
     ```
+    
     ------
     ------
     ------
@@ -58,7 +61,7 @@ build-section = ([name, config])->
 method-list =
     config
         |> obj-to-pairs 
-        |> map -> " * #{it.0}"
+        |> map -> " * [api.#{it.0}(params, cb)](##{it.0})"
         |> join "\n"
 
 available-methods =
