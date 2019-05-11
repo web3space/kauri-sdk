@@ -9,8 +9,8 @@ build-param = (config, name)-->
 
 build-section = ([name, config])->
     """
-    (##{name})
-    ### #{config.title}
+    # #{name}
+    #### #{config.title}
     
     #{config.desc ? ""}
     
