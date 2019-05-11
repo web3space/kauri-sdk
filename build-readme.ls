@@ -35,7 +35,9 @@ build-section = ([name, config])->
     
     Need Token: #{if config.need-key then 'yes' else 'no' }
     
-    #### Try it manually
+    #### For other platforms
+    
+    Please follow RESTful standard by exapmle:
     
     ```bash
     

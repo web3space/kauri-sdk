@@ -63,7 +63,9 @@ api.exchangeRate(params, function(err, data) {
 
 Need Token: no
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -124,7 +126,9 @@ api.createUser(params, function(err, data) {
 
 Need Token: no
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -175,7 +179,9 @@ api.obtainToken(params, function(err, data) {
 
 Need Token: no
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -225,7 +231,9 @@ api.refreshToken(params, function(err, data) {
 
 Need Token: no
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -274,7 +282,9 @@ api.getBalance(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -368,7 +378,9 @@ api.accountInfo(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -637,7 +649,9 @@ api.withdrawal(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -687,7 +701,9 @@ api.cancelWithdrawal(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -734,7 +750,9 @@ api.repeatWithdrawal(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -783,7 +801,9 @@ api.exchange(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -835,7 +855,9 @@ api.exchangeCalculate(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -882,7 +904,9 @@ api.orderHistory(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
@@ -948,7 +972,9 @@ api.orderDetails(params, function(err, data) {
 
 Need Token: yes
 
-#### Try it manually
+#### For other platforms
+
+Please follow RESTful standard by exapmle:
 
 ```bash
 
