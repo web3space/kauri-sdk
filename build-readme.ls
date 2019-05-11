@@ -8,6 +8,8 @@ build-param = (config, name)-->
     "    #{name}: '#{config.param-examples?[name] ? ''}',"
 
 build-section = ([name, config])->
+    params = 
+        config.params |> map build-param config
     """
     # #{name}
     #### #{config.title}
@@ -17,7 +19,7 @@ build-section = ([name, config])->
     ```Javascript
     
     const params = {
-    #{config.params |> map build-param config |> join "\n"}
+    #{params |> join "\n"}
     }
     
     api.#{name}(params, function(err, data) {
@@ -37,7 +39,7 @@ build-section = ([name, config])->
     
     ```bash
     
-    curl -X #{config.method.to-upper-case!} --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/#{config.query}'
+    curl -X #{config.method.to-upper-case!} --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '#{params |> join ""}' 'https://coinpay.org.ua/api/v1/#{config.query}'
     
     ```
     

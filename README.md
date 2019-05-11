@@ -67,7 +67,7 @@ Need Token: no
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/exchange_rate'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '' 'https://coinpay.org.ua/api/v1/exchange_rate'
 
 ```
 
@@ -128,7 +128,7 @@ Need Token: no
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/user/create'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    password: '',    email: '',    username: '',' 'https://coinpay.org.ua/api/v1/user/create'
 
 ```
 
@@ -179,7 +179,7 @@ Need Token: no
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/user/obtain_token'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    password: '',    email: '',' 'https://coinpay.org.ua/api/v1/user/obtain_token'
 
 ```
 
@@ -229,7 +229,7 @@ Need Token: no
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/user/refresh_token'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    token: '',' 'https://coinpay.org.ua/api/v1/user/refresh_token'
 
 ```
 
@@ -278,7 +278,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/user/balance'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '' 'https://coinpay.org.ua/api/v1/user/balance'
 
 ```
 
@@ -372,7 +372,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/user/account_info'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '' 'https://coinpay.org.ua/api/v1/user/account_info'
 
 ```
 
@@ -641,7 +641,7 @@ Need Token: yes
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/withdrawal'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    withdrawal_type: '',    wallet_to: '',    comment: '',    amount: '',    currency: '',' 'https://coinpay.org.ua/api/v1/withdrawal'
 
 ```
 
@@ -691,7 +691,7 @@ Need Token: yes
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/withdrawal/cancel'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    order_id: '',' 'https://coinpay.org.ua/api/v1/withdrawal/cancel'
 
 ```
 
@@ -738,7 +738,7 @@ Need Token: yes
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/withdrawal/repeat'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    order_id: '',' 'https://coinpay.org.ua/api/v1/withdrawal/repeat'
 
 ```
 
@@ -787,7 +787,7 @@ Need Token: yes
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/exchange'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    currency_to_get_amount: '100',    currency_to_spend: 'BTC',    currency_to_get: 'UAH',' 'https://coinpay.org.ua/api/v1/exchange'
 
 ```
 
@@ -839,7 +839,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/exchange/calculate'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    currency_to_get_amount: '100',    currency_to_spend: 'BTC',    currency_to_get: 'UAH',' 'https://coinpay.org.ua/api/v1/exchange/calculate'
 
 ```
 
@@ -886,7 +886,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/orders/history'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '' 'https://coinpay.org.ua/api/v1/orders/history'
 
 ```
 
@@ -952,7 +952,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzkzNzYsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzg3NzYsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.UblqfvW7Lav7igoOACWhmnA1jwxBq6yVuTMNPmE7tEs' 'https://coinpay.org.ua/api/v1/orders/details'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    order_id: '',' 'https://coinpay.org.ua/api/v1/orders/details'
 
 ```
 
