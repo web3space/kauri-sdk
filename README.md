@@ -67,7 +67,7 @@ Need Token: no
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '' 'https://coinpay.org.ua/api/v1/exchange_rate'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  }" 'https://coinpay.org.ua/api/v1/exchange_rate'
 
 ```
 
@@ -106,9 +106,9 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
-    username: '',
+    password: 'theStrongPassW00rd',
+    email: 'a****@gmail.com',
+    username: 'exadmin'
 }
 
 api.createUser(params, function(err, data) {
@@ -128,7 +128,7 @@ Need Token: no
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    password: '',    email: '',    username: '',' 'https://coinpay.org.ua/api/v1/user/create'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  password: 'theStrongPassW00rd', email: 'a****@gmail.com', username: 'exadmin' }" 'https://coinpay.org.ua/api/v1/user/create'
 
 ```
 
@@ -158,8 +158,8 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    password: '',
-    email: '',
+    password: 'theStrongPassW00rd',
+    email: 'a****@gmail.com'
 }
 
 api.obtainToken(params, function(err, data) {
@@ -179,7 +179,7 @@ Need Token: no
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    password: '',    email: '',' 'https://coinpay.org.ua/api/v1/user/obtain_token'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  password: 'theStrongPassW00rd', email: 'a****@gmail.com' }" 'https://coinpay.org.ua/api/v1/user/obtain_token'
 
 ```
 
@@ -209,7 +209,7 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    token: '',
+    token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzg5NDIsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzgzNDIsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.cEqgi0bchlbKkObZtkFryPdmcmzWoTZ_CQlXA6k3gSM'
 }
 
 api.refreshToken(params, function(err, data) {
@@ -229,7 +229,7 @@ Need Token: no
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    token: '',' 'https://coinpay.org.ua/api/v1/user/refresh_token'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzg5NDIsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzgzNDIsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.cEqgi0bchlbKkObZtkFryPdmcmzWoTZ_CQlXA6k3gSM' }" 'https://coinpay.org.ua/api/v1/user/refresh_token'
 
 ```
 
@@ -278,7 +278,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '' 'https://coinpay.org.ua/api/v1/user/balance'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  }" 'https://coinpay.org.ua/api/v1/user/balance'
 
 ```
 
@@ -372,7 +372,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '' 'https://coinpay.org.ua/api/v1/user/account_info'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  }" 'https://coinpay.org.ua/api/v1/user/account_info'
 
 ```
 
@@ -617,11 +617,11 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    withdrawal_type: '',
-    wallet_to: '',
-    comment: '',
-    amount: '',
-    currency: '',
+    withdrawal_type: 'GATEWAY',
+    wallet_to: '<destination_wallet>',
+    comment: 'Withdraw Funds',
+    amount: '1',
+    currency: 'UAH'
 }
 
 api.withdrawal(params, function(err, data) {
@@ -641,7 +641,7 @@ Need Token: yes
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    withdrawal_type: '',    wallet_to: '',    comment: '',    amount: '',    currency: '',' 'https://coinpay.org.ua/api/v1/withdrawal'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  withdrawal_type: 'GATEWAY', wallet_to: '<destination_wallet>', comment: 'Withdraw Funds', amount: '1', currency: 'UAH' }" 'https://coinpay.org.ua/api/v1/withdrawal'
 
 ```
 
@@ -671,7 +671,7 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    order_id: '',
+    order_id: '840e166e-86ad-47cf-8cbc-7c1840b2010'
 }
 
 api.cancelWithdrawal(params, function(err, data) {
@@ -691,7 +691,7 @@ Need Token: yes
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    order_id: '',' 'https://coinpay.org.ua/api/v1/withdrawal/cancel'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  order_id: '840e166e-86ad-47cf-8cbc-7c1840b2010' }" 'https://coinpay.org.ua/api/v1/withdrawal/cancel'
 
 ```
 
@@ -718,7 +718,7 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    order_id: '',
+    order_id: '840e166e-86ad-47cf-8cbc-7c1840b2010'
 }
 
 api.repeatWithdrawal(params, function(err, data) {
@@ -738,7 +738,7 @@ Need Token: yes
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    order_id: '',' 'https://coinpay.org.ua/api/v1/withdrawal/repeat'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  order_id: '840e166e-86ad-47cf-8cbc-7c1840b2010' }" 'https://coinpay.org.ua/api/v1/withdrawal/repeat'
 
 ```
 
@@ -767,7 +767,7 @@ HTTP Status: 200
 const params = {
     currency_to_get_amount: '100',
     currency_to_spend: 'BTC',
-    currency_to_get: 'UAH',
+    currency_to_get: 'UAH'
 }
 
 api.exchange(params, function(err, data) {
@@ -787,7 +787,7 @@ Need Token: yes
 
 ```bash
 
-curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    currency_to_get_amount: '100',    currency_to_spend: 'BTC',    currency_to_get: 'UAH',' 'https://coinpay.org.ua/api/v1/exchange'
+curl -X POST --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  currency_to_get_amount: '100', currency_to_spend: 'BTC', currency_to_get: 'UAH' }" 'https://coinpay.org.ua/api/v1/exchange'
 
 ```
 
@@ -819,7 +819,7 @@ HTTP Status: 200
 const params = {
     currency_to_get_amount: '100',
     currency_to_spend: 'BTC',
-    currency_to_get: 'UAH',
+    currency_to_get: 'UAH'
 }
 
 api.exchangeCalculate(params, function(err, data) {
@@ -839,7 +839,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    currency_to_get_amount: '100',    currency_to_spend: 'BTC',    currency_to_get: 'UAH',' 'https://coinpay.org.ua/api/v1/exchange/calculate'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  currency_to_get_amount: '100', currency_to_spend: 'BTC', currency_to_get: 'UAH' }" 'https://coinpay.org.ua/api/v1/exchange/calculate'
 
 ```
 
@@ -886,7 +886,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '' 'https://coinpay.org.ua/api/v1/orders/history'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  }" 'https://coinpay.org.ua/api/v1/orders/history'
 
 ```
 
@@ -932,7 +932,7 @@ HTTP Status: 200
 ```Javascript
 
 const params = {
-    order_id: '',
+    order_id: '840e166e-86ad-47cf-8cbc-7c1840b2010'
 }
 
 api.orderDetails(params, function(err, data) {
@@ -952,7 +952,7 @@ Need Token: yes
 
 ```bash
 
-curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d '    order_id: '',' 'https://coinpay.org.ua/api/v1/orders/details'
+curl -X GET --header 'Accept: application/json' --header 'Authorization: Bearer {token}' --d "{  order_id: '840e166e-86ad-47cf-8cbc-7c1840b2010' }" 'https://coinpay.org.ua/api/v1/orders/details'
 
 ```
 

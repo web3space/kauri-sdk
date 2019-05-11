@@ -22,7 +22,7 @@ module.exports =
         method: \post
         need-key: no
         params: <[ password email username ]>
-        param-exmaples:
+        param-examples:
           email: "a****@gmail.com"
           password: "theStrongPassW00rd"
           username: "exadmin"
@@ -36,7 +36,7 @@ module.exports =
         method: \post
         need-key: no
         params: <[ password email ]>
-        param-exmaples:
+        param-examples:
           email: "a****@gmail.com"
           password: "theStrongPassW00rd"
         query: \user/obtain_token
@@ -49,7 +49,7 @@ module.exports =
         method: \post
         need-key: no
         params: <[ token ]>
-        param-exmaples:
+        param-examples:
           token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTUxMzg5NDIsInVzZXJuYW1lIjoiXHUwNDIxXHUwNDMyXHUwNDRmXHUwNDQyIiwib3JpZ19pYXQiOjE1NTUxMzgzNDIsInVzZXJfaWQiOjUsIm90cF9kZXZpY2VfaWQiOm51bGx9.cEqgi0bchlbKkObZtkFryPdmcmzWoTZ_CQlXA6k3gSM"
         query: \user/refresh_token
         example:
@@ -327,7 +327,7 @@ module.exports =
         method: \post
         need-key: yes
         params: <[ withdrawal_type wallet_to comment amount currency ]>
-        param-exmaples:
+        param-examples:
           withdrawal_type: "GATEWAY"
           wallet_to: "<destination_wallet>"
           comment: "Withdraw Funds"
@@ -346,7 +346,7 @@ module.exports =
         method: \post
         need-key: yes
         params: <[ order_id ]>
-        param-exmaples:
+        param-examples:
           order_id: "840e166e-86ad-47cf-8cbc-7c1840b2010"
         query: \withdrawal/cancel
     repeat-withdrawal: 
@@ -355,7 +355,7 @@ module.exports =
         method: \post
         need-key: yes
         params: <[ order_id ]>
-        param-exmaples:
+        param-examples:
           order_id: "840e166e-86ad-47cf-8cbc-7c1840b2010"
         query: \withdrawal/repeat
     exchange: 
@@ -414,7 +414,7 @@ module.exports =
         method: \get
         need-key: yes
         params: <[ order_id ]>
-        param-exmaples:
+        param-examples:
           order_id: "840e166e-86ad-47cf-8cbc-7c1840b2010"
         query: \orders/details
         example:
